@@ -100,10 +100,10 @@ while (continuar == "SI"){
 
 
     
-        if ( continuar == "NO"){
+    if ( continuar == "NO"){
             console.log (" Muchas gracias por tu visita. Vuelve pronto!!");
         
-        }
+    }
        
     
 
