@@ -6,18 +6,17 @@ function calculo_interes ( monto, n_cuotas){
     monto = parseFloat (monto);
     n_cuotas = parseInt (n_cuotas);
 
-    
- 
+     
 
     if (monto > 0 && n_cuotas == 12){
         let interes = monto + (monto * 0.30);
         return interes
     }
-    else if ( n_cuotas == 18){
+    else if ( monto > 0 && n_cuotas == 18){
         let interes = monto + (monto * 0.40);
         return interes
     }
-    else if (n_cuotas == 24){
+    else if (monto > 0 && n_cuotas == 24){
         let interes = monto + (monto * 0.60);
         return interes
     }
@@ -32,16 +31,11 @@ function calculo_interes ( monto, n_cuotas){
 
 
 
-
-
-
 //BIENVENIDA AL SISTEMA DE SIMULADOR WEB
 
 
 let nombre_usuario = prompt ("Ingrese su nombre")
 console.log("Bienvenido a nuestro simulador web", nombre_usuario)
-
-
 
 
 let consulta_simulador = prompt ("Desea simular su crédito: SI o NO")
@@ -78,7 +72,11 @@ console.log("Costo total crédito: ", calculo_interes(monto, n_cuotas));
 
 
 let continuar = prompt ("Desea realizar otra simulación: SI o NO");
- 
+    if ( continuar == "NO"){
+    console.log (" Muchas gracias por tu visita. Vuelve pronto!!");
+
+    }
+
 
 
 while (continuar == "SI"){
@@ -101,13 +99,13 @@ while (continuar == "SI"){
     continuar = prompt ("Desea realizar otra simulación: SI o NO")
 
 
-    while( continuar == "NO"){
+    
         if ( continuar == "NO"){
             console.log (" Muchas gracias por tu visita. Vuelve pronto!!");
-            break
+        
         }
        
-    }
+    
 
 }
 
